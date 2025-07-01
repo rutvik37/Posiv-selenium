@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "App",
+      "request": "launch",
+      "mainClass": "com.rutvik.selenium.App",
+      "projectName": ""
+    },
+    {
+      "type": "java",
+      "name": "Run Selenium App",
+      "request": "launch",
+      "mainClass": "com.rutvik.selenium.App",
+      "projectName": "selenium-demo",
+      "classPaths": [
+        "${workspaceFolder}/target/classes"
+      ]
+    }
+  ]
+}
