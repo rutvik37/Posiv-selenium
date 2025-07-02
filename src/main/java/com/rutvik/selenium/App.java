@@ -18,7 +18,7 @@ public class App {
 
         driver.get("https://admin.posiv.org.uk/#/");
 
-        // ========== Login ==========
+       
         WebElement emailInput = driver.findElement(By.name("email"));
         emailInput.sendKeys("admin@posiv.com");
 
@@ -31,11 +31,13 @@ public class App {
         ));
         loginButton.click();
 
-        Thread.sleep(3000); // wait after login
+        Thread.sleep(3000); 
 
-        // ========== Use Dashboard ==========
         Dashboard dashboard = new Dashboard(driver);
-        dashboard.testDashboard();
+        dashboard.testDashboard(); //1 
+
+        Profile profile = new Profile(driver);
+        profile.runProfileFlow(); //2
 
         Thread.sleep(3000);
         driver.quit();

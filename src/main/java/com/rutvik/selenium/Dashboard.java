@@ -18,12 +18,14 @@ public class Dashboard {
         clickDashboardItem("Total Earnings");
         clickDashboardItem("Total Contact Request");
 
+         driver.findElement(By.linkText("Dashboard")).click();
+
         System.out.println("✅ 1 . Dashboard");
     }
 
     private void clickDashboardItem(String itemText) throws InterruptedException {
         driver.findElement(By.linkText("Dashboard")).click();
         driver.findElement(By.xpath("//*[text()='" + itemText + "']")).click();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
     }
 }
